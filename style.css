@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  background-image:none;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.navbar-custom {
+  background-color: #000;
+}
+.navbar-custom .nav-link {
+  color: #fff;
+}
+.navbar-custom .nav-link:hover {
+  color: #ffc107;
+}
+.section {
+  padding: 60px 0;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+/*
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: #fff; 
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-logo {
+  max-width: 110%;
+  height: auto;
+  object-fit: contain;
+}*/
+#hero {
+  padding-top: 90px; /* Adjust based on navbar height */
+  text-align: center;
+  background-image:url("images/pexels-kindelmedia-7688336.jpg"); 
+}
+
+.hero-logo {
+  max-width: 200px;
+}
+
+.text-center mb-5{
+    color: #ffc107;
+}
+
+#about {
+  background-color: #fff;
+  color: #000;
+  background-image: none;
+}
+/* optional background 
+#clients {
+  background-image: url('https://www.shutterstock.com/shutterstock/photos/2424450089/display_1500/stock-photo-happy-middle-aged-business-woman-executive-ceo-leader-discussing-project-management-planning-2424450089.jpg');
+}
+#contact {
+  background-image: url('https://www.shutterstock.com/shutterstock/photos/2493043863/display_1500/stock-photo-concept-of-contact-us-customer-support-service-icon-contact-us-or-customer-support-hotline-2493043863.jpg');
+} */
+ #contact{
+  background-image: url("images/pexels-jessbaileydesign-1097930.jpg");
+ }
+  #clients{
+    background-image: url("images/pexels-pixabay-279949.jpg");
+  }
+  #staffing-services{
+    background-image: url("images/pexels-olly-3760072.jpg");
+  }
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+.client-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.client-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+footer {
+  background-color:black;
+  color: #ccc;
+  padding: 10px 0;
+  text-align: center;
+}
+ .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Optional: Delay fade-ins by section */
+  .fade-in:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  .fade-in:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+.social-icon {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(98%) saturate(747%) hue-rotate(360deg) brightness(104%) contrast(102%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+   nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+    #formContainer {
+      margin-top: 20px;
+    }
+    form {
+      max-width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+    form input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+    }
+  /* Modal Form Styling */
+#employeeLoginModal .modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+}
+
+#employeeLoginModal .modal-header {
+  border-bottom: 1px solid #eee;
+}
+
+#employeeLoginModal .modal-title {
+  font-weight: bold;
+  color: #333;
+}
+
+#employeeLoginModal .form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #222;
+}
+
+#employeeLoginModal .form-control {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #f8f9fa;
+  color: #222;
+}
+
+#employeeLoginModal .btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+#employeeLoginModal .modal-footer {
+  border-top: none;
+  padding-top: 0;
+}

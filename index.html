@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardskello | Staffing Solutions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/final websitelogo.png" alt="Hardskello Logo" style="height: 30px; margin-right: 10px;">
+      <span class="text-white fw-bold">Hardskello</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#staffing-services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clients">Staffing Expertise</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#employeeLoginModal">Employee</a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="employer-home.html">Employer</a>
+</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Success</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Successfully signed in to employee portal!
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section id="hero"  class="mt-0 pt-0">
+  <img src="images/final websitelogo.png" alt="Hardskello Logo" class="hero-logo" />
+</section>
+<!-- Employee Login Modal -->
+<div class="modal fade" id="employeeLoginModal" tabindex="-1" aria-labelledby="employeeLoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="employeeLoginForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="employeeLoginModalLabel">Employee Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+<div class="modal-body">
+  <div class="mb-3">
+    <label for="employeeUsername" class="form-label">Username</label>
+    <input type="text" class="form-control" id="employeeUsername" required>
+  </div>
+  
+  <div class="mb-3">
+    <label for="employeePassword" class="form-label">Password</label>
+    <input type="password" class="form-control" id="employeePassword" required>
+  </div>
+</div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- End Employee Login Modal -->
+
+
+<script>
+document.getElementById('employeeLoginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // You can add authentication logic here
+  window.location.href = "employee-home.html";
+});
+</script>
+<!--<script>
+document.getElementById('employeeLoginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Hide login modal
+  var loginModal = bootstrap.Modal.getInstance(document.getElementById('employeeLoginModal'));
+  loginModal.hide();
+
+  // Show success modal
+  var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+  successModal.show();
+
+  // Redirect after 2 seconds
+  setTimeout(function() {
+    successModal.hide();
+    window.location.href = "employee-home.html";
+  }, 2000);
+});
+</script> -->
+
+
+
+<script>
+document.getElementById('employeeLoginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var loginModal = bootstrap.Modal.getInstance(document.getElementById('employeeLoginModal'));
+  loginModal.hide();
+  var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+  successModal.show();
+  setTimeout(function() {
+    successModal.hide();
+    window.location.href = "employee-home.html";
+  }, 2000);
+});
+</script>
+
+
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 text-dark fw-bold">About Hardskello</h2>
+    
+    <div class="row mb-5 fade-in">
+      <div class="col-md-12">
+        <p class="lead text-center text-muted">
+          <i class="bi bi-people-fill text-primary me-2"></i>
+          Hardskello is a workforce initiative by Revive Business Solutions, proudly serving the industrial backbone of Illinois.
+          Built on the values of <strong>grit, reliability, and hard work</strong>, we specialize in staffing blue-collar roles
+          across the state’s most vital sectors — from manufacturing floors in Rockford to logistics hubs in Joliet, to
+          construction sites in Chicago and beyond.
+        </p>
+        <p class="text-muted text-center">
+          <i class="bi bi-patch-check-fill text-success me-2"></i>
+          We are not just recruiters — we’re <strong>partners to industries</strong> that move, build, and grow America. Whether you need CNC machinists in Peoria, forklift operators in Aurora, warehouse crews in Elgin, or maintenance techs in Decatur, Hardskello delivers dependable talent when and where it counts.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4 fade-in">
+      <div class="col-md-6">
+        <div class="bg-white shadow-sm p-4 rounded h-100">
+          <h4 class="text-primary fw-semibold mb-3">
+            <i class="bi bi-diagram-3-fill me-2 text-warning"></i> Our Focus Industries in Illinois
+          </h4>
+          <ul class="text-muted mb-0">
+            <li><strong>Manufacturing:</strong> Metal fabrication, automotive, food processing, plastic injection molding</li>
+            <li><strong>Logistics & Warehousing:</strong> Distribution centers, cold storage, e-commerce fulfillment</li>
+            <li><strong>Construction & Trades:</strong> General labor, HVAC, plumbing, electrical, roadwork</li>
+            <li><strong>Industrial Maintenance & Operations:</strong> Technicians, millwrights, machine operators</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="bg-white shadow-sm p-4 rounded h-100">
+          <h4 class="text-primary fw-semibold mb-3">
+            <i class="bi bi-stars text-success me-2"></i> What Sets Us Apart
+          </h4>
+          <ul class="text-muted mb-0">
+            <li><strong>Local Knowledge:</strong> We know Illinois — its labor markets, union rules, and industrial zones.</li>
+            <li><strong>Fast Turnaround:</strong> We staff with urgency while never compromising on worker quality.</li>
+            <li><strong>Workforce Ready:</strong> All candidates are screened, skilled, and safety-aware.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 fade-in">
+      <h4 class="text-primary fw-semibold">
+        <i class="bi bi-bullseye text-danger me-2"></i> Our Mission
+      </h4>
+      <p class="text-muted fs-5">
+        To uplift blue-collar workers and power the pulse of Illinois industry with reliable staffing solutions that work as hard as you do.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Our Services Section -->
+<section id="staffing-services" class="section" style="background-color: #000;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: #ffc107;">What We Offer</h2>
+    <div class="row g-4 text-white">
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Temporary Staffing</h4>
+          <p>Short-term workforce solutions for seasonal demand, employee absence, or project-specific roles.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Permanent Staffing</h4>
+          <p>End-to-end recruitment for full-time positions including sourcing, screening, and placement.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Contract & Temp-to-Hire</h4>
+          <p>Deploy skilled professionals on contract or trial-to-hire basis with payroll flexibility.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Payroll & Compliance</h4>
+          <p>Manage salaries, PF/ESI, tax deductions, and labor law compliance under one roof.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Executive Search</h4>
+          <p>Confidential recruitment of leadership and high-level positions tailored to strategic goals.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+  <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+    <h4 class="text-warning">Payroll & Benefits Administration</h4>
+    <p>We handle end-to-end U.S. payroll processing including tax withholdings, W-2s, workers’ compensation, and optional benefits like health and retirement plans.</p>
+  </div>
+</div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Recruitment Process Outsourcing (RPO)</h4>
+          <p>Outsource your full recruitment lifecycle to reduce costs and accelerate hiring.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Skill Assessment & Testing</h4>
+          <p>Pre-employment evaluation for technical, behavioral, language, and aptitude skills.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-dark border rounded shadow-sm client-card h-100">
+          <h4 class="text-warning">Blue-Collar & Industrial Staffing</h4>
+          <p>Workforce solutions for manufacturing, logistics, warehousing, maintenance, and more.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Staffing Expertise Section -->
+<section id="clients" class="section">
+  <div class="container">
+<h2 class="text-center mb-5 fw-bold text-warning">Staffing Expertise</h2>
+    <div class="row text-start">
+      <div class="col-md-6 mb-4">
+        <div class="p-4 bg-dark text-white border rounded shadow-sm client-card">
+          <h4 style="color: #ffc107;">White-Collar Staffing</h4>
+          <p>We recruit professionals for corporate and administrative roles that demand strong analytical, technical, or leadership skills.</p>
+          <ul>
+            <li>Administrative Assistants</li>
+            <li>HR Managers</li>
+            <li>Finance & Accounting Executives</li>
+            <li>Customer Support Representatives</li>
+            <li>IT Support & Developers</li>
+            <li>Sales & Marketing Associates</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="p-4 bg-dark text-white border rounded shadow-sm client-card">
+          <h4 style="color: #17a2b8;">Blue-Collar Staffing</h4>
+          <p>We provide dependable tradespeople for hands-on and labor-intensive jobs in manufacturing, logistics, and facilities.</p>
+          <ul>
+            <li>Maintenance Technicians</li>
+            <li>Electricians & Plumbers</li>
+            <li>CNC Machine Operators</li>
+            <li>Construction Laborers</li>
+            <li>Warehouse & Forklift Operators</li>
+            <li>HVAC Technicians</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" class="section">
+  <div class="container overlay">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Contact Us</h2>
+        <p><strong> Woodfield Lake Office Court:</strong><br>
+       949 N Plum Grove Rd,<br>
+        Schaumburg,<br>
+        Illinois,<br>
+        US state 60173</p>
+        <p class="text-center">Reach out via email at <a href="" class="text-warning">team@hardskello.com</a></p>
+        <strong>Phone:</strong> (847) 517-8415</p>
+
+  
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class=  "d-flex justify-content-center mt-4">
+  <a href="https://www.facebook.com" target="_blank" class="me-3">
+    <img class ="social-icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="30">
+  </a>
+  <a href="https://www.twitter.com" target="_blank" class="me-3">
+    <img  class ="social-icon"src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="30">
+  </a>
+  <a href="https://www.linkedin.com/in/hardskello-recruiters-b50379376/" target="_blank" class="me-3">
+    <img  class ="social-icon"src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" width="30">
+  </a>
+  <a href="https://www.instagram.com/Keerthiram1104" target="_blank" class="me-3">
+    <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30">
+  </a>
+  <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Hardskello. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
